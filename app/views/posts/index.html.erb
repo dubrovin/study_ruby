@@ -3,7 +3,7 @@
     <% @posts.each do |post| %>
     <li>
         <p>
-            <%= link_to post.title, post_path(post) %> created by <%= post.user.login %>
+            <%= link_to post.title, post_path(post) %> created by <%= post.user.try(:login) %>
         </p>
     </li>
     <span>
@@ -11,3 +11,5 @@
     </span>
     <% end %>
 </ul>
+
+<%= link_to "Create post", new_post_path %>
