@@ -11,12 +11,12 @@ class PostsController < ApplicationController
     end
 
     def new
-        # @post = Post.new
+        @post = Post.new
     end
 
     def create
         puts params
-        Post.create(post_params)
+        current_user.posts.create(post_params)
         # flash[:notice] = "Post was successfully created"
         redirect_to posts_path, notice: "Post was successfully created"
     end
