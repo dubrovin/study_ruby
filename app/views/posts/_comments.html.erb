@@ -3,6 +3,7 @@
     <li>
        <div>
         <%= comment.title %>
+        posted by <%= comment.author_name %>
        </div>
        <div>
         <%= comment.message %>
@@ -10,3 +11,5 @@
     </li>
     <% end %>
 </ul>
+
+<%= render 'comments/form', commentable:  commentable %>
