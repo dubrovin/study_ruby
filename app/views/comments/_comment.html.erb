@@ -1,5 +1,4 @@
-<ul id="comments">
-    <% commentable.comments.each do |comment| %>
+
     <li>
        <div>
         <%= comment.title %>
@@ -9,7 +8,3 @@
         <%= comment.message %>
        </div>
     </li>
-    <% end %>
-</ul>
-
-<%= render 'comments/form', commentable:  commentable %>
